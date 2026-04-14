@@ -55,7 +55,7 @@ cd esp32_tcp_pro
 #    #define WIFI_PASS  "your_password"
 
 # 4. (Optional) Change the auth token
-#    #define AUTH_TOKEN "NEXLINK2024"
+#    #define AUTH_TOKEN "NEXLINK2026"
 
 # 5. Build, flash, and monitor
 idf.py build flash monitor
@@ -70,7 +70,7 @@ idf.py build flash monitor
 #define WIFI_PASS     "your_password"
 #define TCP_PORT      3333
 #define MAX_CLIENTS   4             // concurrent connections
-#define AUTH_TOKEN    "NEXLINK2024"
+#define AUTH_TOKEN    "NEXLINK2026"
 #define HEARTBEAT_MS  10000         // idle timeout in ms
 
 // GPIO pins controlled by LED_ON/LED_OFF
@@ -90,15 +90,15 @@ All messages are **newline-terminated JSON** (`\n`).
 
 | Command | JSON |
 |---|---|
-| Ping | `{"cmd":"PING","token":"NEXLINK2024"}` |
-| LED on (default pin 2) | `{"cmd":"LED_ON","token":"NEXLINK2024"}` |
-| LED on (specific pin) | `{"cmd":"LED_ON","token":"NEXLINK2024","pin":4}` |
-| LED off | `{"cmd":"LED_OFF","token":"NEXLINK2024","pin":2}` |
-| All off | `{"cmd":"ALL_OFF","token":"NEXLINK2024"}` |
-| PWM 75% on pin 18 | `{"cmd":"PWM","token":"NEXLINK2024","pin":18,"duty":75}` |
-| Status | `{"cmd":"STATUS","token":"NEXLINK2024"}` |
-| Telemetry | `{"cmd":"TELEMETRY","token":"NEXLINK2024"}` |
-| Reboot | `{"cmd":"REBOOT","token":"NEXLINK2024"}` |
+| Ping | `{"cmd":"PING","token":"NEXLINK2026"}` |
+| LED on (default pin 2) | `{"cmd":"LED_ON","token":"NEXLINK2026"}` |
+| LED on (specific pin) | `{"cmd":"LED_ON","token":"NEXLINK2026","pin":4}` |
+| LED off | `{"cmd":"LED_OFF","token":"NEXLINK2026","pin":2}` |
+| All off | `{"cmd":"ALL_OFF","token":"NEXLINK2026"}` |
+| PWM 75% on pin 18 | `{"cmd":"PWM","token":"NEXLINK2026","pin":18,"duty":75}` |
+| Status | `{"cmd":"STATUS","token":"NEXLINK2026"}` |
+| Telemetry | `{"cmd":"TELEMETRY","token":"NEXLINK2026"}` |
+| Reboot | `{"cmd":"REBOOT","token":"NEXLINK2026"}` |
 
 ### Responses (ESP32 → Client)
 
@@ -167,7 +167,7 @@ esp32> quit             # exit
 
 Raw JSON is also accepted:
 ```
-esp32> {"cmd":"LED_ON","token":"NEXLINK2024","pin":5}
+esp32> {"cmd":"LED_ON","token":"NEXLINK2026","pin":5}
 ```
 
 ---
